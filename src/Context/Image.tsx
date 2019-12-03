@@ -15,7 +15,7 @@ export const Image: React.FunctionComponent<ImageProps> = React.memo(props => {
         {(value: WebPValue) => (
           <img
             {...childProps}
-            data-src={(props.useWebP && props.webP) || props.src}
+            data-src={(value.supportWebP && props.webP) || props.src}
             className="lazyload"
           />
         )}
